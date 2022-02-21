@@ -1,2 +1,3 @@
 asyncio
 aiosmtplib
+more-itertools
