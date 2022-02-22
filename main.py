@@ -5,6 +5,7 @@ import aiosmtplib
 from email.message import EmailMessage
 from more_itertools import chunked
 
+
 LIMITATION = 20
 
 
@@ -43,6 +44,7 @@ async def main():
         email_tasks = [asyncio.create_task(send_email(person.email, person.email_msg))
                        for person in persons]
         await asyncio.gather(*email_tasks)
+
 
 if __name__ == '__main__':
     asyncio.run(main())
